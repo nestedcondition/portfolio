@@ -114,7 +114,6 @@ PAGE: ABOUT
 *****************/
 
 .profile-photo {
-  display: block;
   max-width: 150px;
   margin: 0 auto 30px;
   border-radius: 100%;
@@ -292,7 +291,7 @@ MEDIA QUERIES
   }
 
   h2 {
-    font-size: .8.25em;
+    font-size: .825em;
     margin-bottom: 20px;
   }
 
