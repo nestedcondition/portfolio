@@ -7,7 +7,7 @@ body {
   font-family: 'DejaVu Sans', sans-serif;
   box-sizing: border-box;
   /*-webkit-filter: grayscale(100%);*/
-  /*-webkit-filter: blur(6px);*/
+  /*-webkit-filter: blur(2px);*/
   /*transform: rotate(180deg);*/
 }
 
@@ -98,7 +98,6 @@ FOOTER
 footer {
   font-size: 0.75em;
   text-align: center;
-  /*clear: both;*/
   padding-top: 3em;
   color: #ccc;
 }
