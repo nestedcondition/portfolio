@@ -1,0 +1,6 @@
+[submodule "todo_offline"]
+	path = todo_offline
+	url = git@github.com:nestedcondition/todo_offline.git
+[submodule "P5"]
+	path = P5
+	url = git@github.com:nestedcondition/P5.git
