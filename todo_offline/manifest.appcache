@@ -1,0 +1,31 @@
+CACHE MANIFEST
+
+# new Date().toISOString();
+#version 2015-09-24T11:09:28.088Z
+
+CACHE:
+
+#images
+images/icon.png
+images/icon@2x.png
+images/icon@3x.png
+
+#internal HTML documents
+index.html
+
+#style sheets
+/css/style.css
+https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,700
+
+#javascript files
+/js/node-uuid.min.js
+/js/quoteList.js
+/js/taskList.js
+/js/task.js
+/js/app.js
+/js/UI.js
+
+
+
+NETWORK:
+*

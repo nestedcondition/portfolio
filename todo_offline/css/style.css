@@ -1,0 +1,154 @@
+
+body {
+  background-color: #cd853f;
+  color: #cd853f;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.25em;
+}
+#container {
+  display: block;
+  min-width: 200px;
+  margin: 1.25em auto 0;
+  max-width: 768px;
+  background-size: contain;
+  background-color: #fff8dc;
+  font-weight: 400;
+  padding: 1em;
+  border-radius: 2.5%;
+  box-shadow: 0px 15px 20px -12px rgba(0, 128, 0, 0.4), 0px 0px 3px 1px rgba( 0, 128, 0, .4) inset;
+
+}
+#quote {
+  margin: 0;
+  font-size: .9em;
+  font-weight: 400;
+  text-align: left;
+  padding: .6em .3em;
+  border-radius: 7.5%;
+}
+#quote q {
+  margin: 0;
+  font-size: 1.6em;
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 0 1px #cd853f;
+}
+cite {
+  font-style: normal;
+  font-weight: 200;
+  text-shadow: 1px 0 1px #cd853f;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li * {
+  float: left;
+}
+li, h3 {
+  clear:both;
+  list-style:none;
+}
+input, button {
+  outline: none;
+}
+button {
+  background: none;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  min-width: 60px;
+  max-width: 25%;
+  margin: 10px 0 0;
+  font-family: Lato, sans-serif;
+  cursor: pointer;
+}
+button:hover {
+  color: #cd853f;
+  text-decoration: underline;
+}
+
+/* Heading */
+h3,
+label[for='new'] {
+  color: #008000;
+  color: rgba( 0, 128, 0, .7);
+  font-weight: 700;
+  font-size: 1.1em;
+  border-bottom: 2px solid #cd853f;
+  padding: 1.875em 0 0;
+  margin: 0;
+  text-shadow: 1px 0px 2px #fff;
+}
+input[type="text"] {
+  margin: 0;
+  font-size: 1.25em;
+  line-height: 1.25em;
+  height: 1.25em;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  color: #888;
+}
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* New Task */
+label[for='new'] {
+  display: block;
+  margin: 0 0 20px;
+}
+input#new {
+  float: left;
+  max-width: 30%;
+}
+p > button:hover {
+  color: #008000;
+  text-decoration: underline;
+}
+
+/* Task list */
+li {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+li > input[type="checkbox"] {
+  margin: 0 10px;
+  position: relative;
+  top: 15px;
+  background-color: #008000;
+}
+li > label {
+  font-size: 1.25em;
+  line-height: 40px;
+  max-width: 80%;
+  padding: 0 0 0 11px;
+}
+li >  input[type="text"] {
+  max-width: 30%;
+}
+li > .delete:hover {
+  color: #cd3f40;
+  text-decoration: underline;
+}
+
+/* Completed */
+.completed label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Edit Task */
+ul li input[type=text] {
+  display:none;
+}
+ul li.editMode label {
+  display:none;
+}
+.editMode input[type=text] {
+  display:block;
+  border: 2px inset #ffdab9;
+}

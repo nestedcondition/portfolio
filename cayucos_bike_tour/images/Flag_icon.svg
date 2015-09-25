@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
+<svg
+   id="svg574"
+   sodipodi:version="0.33"
+   width="32"
+   height="32"
+   sodipodi:docname="/home/kenny/ent/wiki/Flag_icon.svg"
+   sodipodi:docbase="/home/kenny/ent/wiki/"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs
+     id="defs576">
+    <linearGradient
+       id="linearGradient564">
+      <stop
+         style="stop-color:#0000f5;stop-opacity:1.0000;"
+         offset="0"
+         id="stop565" />
+      <stop
+         style="stop-color:#dce6ff;stop-opacity:1.0000;"
+         offset="1"
+         id="stop566" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient564"
+       id="linearGradient567" />
+  </defs>
+  <sodipodi:namedview
+     id="base" />
+  <rect
+     style="font-size:12.000;fill:#7d7f80;fill-rule:evenodd;stroke-width:1;fill-opacity:1.0000;"
+     id="rect563"
+     width="2.328017"
+     height="33.33365"
+     x="-6.239275e-2"
+     y="0.193235"
+     transform="matrix(0.999855,-1.704325e-2,0.283035,0.959109,0,0)" />
+  <path
+     style="fill:url(#linearGradient567);fill-rule:evenodd;stroke:none;stroke-opacity:1;stroke-width:0.0000;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1.0000;stroke-dasharray:none;"
+     d="M 1.083030 0.296929 C 12.01975 -2.353146 19.24566 7.076597 31.90388 4.950018 L 31.93819 16.88736 C 22.01414 21.14053 15.90217 9.225485 5.437460 13.66401 L 1.083030 0.296929 z "
+     id="path562"
+     sodipodi:nodetypes="ccccc" />
+</svg>

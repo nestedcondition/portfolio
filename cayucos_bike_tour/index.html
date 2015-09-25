@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cayucos Bike Tour</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+
+        <!-- set up full screen map -->
+        <style>
+          html, body, #map-canvas {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            background-color: #b3d1ff;
+          }
+          .no-map {
+              padding : 10em;
+              margin: 6em;
+          }
+        </style>
+    </head>
+    <body>
+<!-- 223, 220, 215; #cccccc;  #E9E5DC-->
+        <!-- map container -->
+        <div id="map-canvas">
+            <!-- overwritten when google.maps.Map loads, called by buildMap() in ko_app4.js -->
+            <p class="no-map">Google maps not yet available</>
+
+        </div>
+
+        <!-- page title -->
+        <div id="header">
+    		        <h1>Cayucos <span>Bike</span> Tour</h1>
+    			        <p>Follow the <span>green</span> bike path</p>
+    	</div>
+
+        <!-- container for street view -->
+        <div id="pano" data-bind='visible : $root.shouldShowPano'></div>
+
+        <!-- container for street view, weather, recommendations and search results -->
+        <div id="results">
+            <!-- container for weather info -->
+            <div class='weather'>
+                <div data-bind='foreach : weather'>
+                    <!-- Using knockout “if” without a container element to provide fallback if async weatherData from openweathermap.org doesn't load-->
+                    <!-- ko ifnot : $data.datetime -->
+                        <div>Don't have weather yet for Cayucos, but I sure bet it's nice.</div>
+                    <!-- /ko -->
+                    <!-- <div data-bind='text : datetime', id='time'></div>
+                    <div data-bind='text : cityName', id='cityName'></div>
+                    <div data-bind="text : skies", id='skies'></div>
+                    <div data-bind='text : temp', id='temp'></div>
+                    <div data-bind='text : wind', id='wind'></div>
+                    <div data-bind='text : humidity', id='humidity'></div> -->
+
+                    <span data-bind='text : cityName', id='cityName'></span>
+                    <span data-bind='text : datetime', id='time'></span>
+                    <br/>
+                    <span data-bind="text : skies", id='skies'></span>
+                    <span data-bind='text : temp', id='temp'></span>
+                    <span data-bind='text : humidity', id='humidity'></span>
+                    <!-- <br/> -->
+                    <span data-bind='text : wind', id='wind'></span>
+
+                </div>
+            </div>
+
+            <!-- container for street view -->
+            <!-- <div id="pano" data-bind='visible : $root.shouldShowPano'></div> -->
+
+        	<hr>
+
+            <!-- container for search info -->
+        	<h2 id='search_results'  data-bind="text: $root.searchType"></h2>
+            <input data-bind='textInput : searchString, event: { keypress: search }', type="text" placeholder="Search Cayucos">
+                <ul id="places" data-bind='foreach : data'>
+                    <li data-bind='text : $data.name, click : $root.clicked'></li>
+                    <div data-bind='foreach : $data.details', class='details'>
+                        <div data-bind='text : address'></div>
+                        <div data-bind='html : website'></div>
+                        <div data-bind='text : phone'></div>
+                        <div data-bind='text : reviews'></div>
+                    </div>
+        	    </ul>
+        <button id="more">More results</button>
+
+        </div>
+
+    </body>
+
+    <!-- styles for rest of page, layered on after full page map is set -->
+    <!-- load now so that user has something to see while data map and weather data are retrieved from the network -->
+    <link rel="stylesheet" href="css/late_styles_small.css" media="(max-width: 767px)" charset="utf-8">
+    <!-- <link rel="stylesheet" href="css/late_styles2.css" media="screen" charset="utf-8"> -->
+    <link rel="stylesheet" href="css/late_styles.css" media="(min-width: 768px)" charset="utf-8">
+
+    <!-- load JavaScript files -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCCuoc63QydWRqc5vujl4Qid41igoWjlG8"></script>
+    <script type='text/javascript' src='js/jquery-2.1.3.min.js'></script>
+
+    <script charset="utf-8" type='text/javascript' >
+        // don't want this to show up before javascript loads, so wait till jQuery loads to add it to the '.details' div
+        var string = "<button name='streetview' data-bind='click : function ( data, event ) {" +
+            " $root.showStreetView ( data ) }'>street view</button>";
+        $ ( '.details' ).append ( string );
+    </script>
+
+    <script type='text/javascript' src='js/knockout-3.3.0.js'></script>
+    <script type='text/javascript' src="js/ko_app4.js"></script>
+
+</html>
