@@ -2,9 +2,14 @@
 body {
   background-color: #cd853f;
   color: #cd853f;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 1.25em;
 }
+
+.enhanced {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 #container {
   display: block;
   min-width: 200px;

@@ -41,3 +41,4 @@ if ( oldList ) {
 
 showQuote();
 todoUI.buildLists( todoList );
+todoUI.enhanceBody();

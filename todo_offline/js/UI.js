@@ -2,6 +2,11 @@
 
 var todoUI = {
 
+  enhanceBody: function () {
+    var body = document.querySelector('body');
+    body.className = 'enhanced';
+  },
+
   getLocalStorage: function() {
     var storage = localStorage.getItem( 'todoList' );
 
